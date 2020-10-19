@@ -1,6 +1,8 @@
-# PHP7.4, Laravel Base
+# Laravel8 Base (PHP7.4)
 
 ### Laravel8 Require Extension
+
+[link] (https://laravel.com/docs/8.x#server-requirements)
 
 - PHP >= 7.3 ( 7.4-fpm-alpine )
 - BCMath PHP Extension
@@ -16,3 +18,7 @@
 ### Add Extension
 
 - redis
+
+---
+
+#### Single Layer Dockerfile

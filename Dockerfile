@@ -1,5 +1,9 @@
 FROM php:7.4-fpm-alpine3.12
 
+LABEL MAINTAINER="nug22kr <nug22kr@gmail.com>"
+LABEL PHP="7.4"
+LABEL BASE_FRAMEWORK="Laravel 8"
+
 WORKDIR /var/www
 
 # Install
