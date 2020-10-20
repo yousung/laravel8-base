@@ -43,10 +43,11 @@ RUN apk add --update --no-cache \
 
   # composer install
   && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer \
-  && composer global require "hirak/prestissimo" \
-  && composer config -g repos.packagist composer https://packagist.kr \
 
   #  Clean
   && rm -rf /var/cache/apk/* \
   && docker-php-source delete \
   && rm -rf /root/.composer/cache
+
+# RUN composer config -g repos.packagist composer https://packagist.kr \
+# && composer global require "hirak/prestissimo"

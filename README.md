@@ -22,4 +22,11 @@
 
 ---
 
-#### Single Layer Dockerfile
+### Child Dockerfile
+
+```
+RUN composer config -g repos.packagist composer https://packagist.kr \
+    && composer global require "hirak/prestissimo"
+```
+
+#### 4 Layer Dockerfile
