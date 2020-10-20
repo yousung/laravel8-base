@@ -10,7 +10,7 @@
 - Fileinfo PHP Extension
 - JSON PHP Extension
 - Mbstring PHP Extension
-- ~~OpenSSL PHP Extension~~
+- OpenSSL PHP Extension
 - PDO PHP Extension
 - Tokenizer PHP Extension
 - XML PHP Extension
@@ -18,6 +18,7 @@
 ### Add Extension
 
 - redis
+- composer (https://packagist.kr)
 
 ---
 

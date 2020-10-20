@@ -26,6 +26,9 @@ RUN apk add --update --no-cache \
     libsodium \
     gd-dev \
     supervisor \
+    openssl \
+    php7-openssl \
+
 
   # Redis install
   && pecl install -o -f redis \
@@ -38,6 +41,12 @@ RUN apk add --update --no-cache \
   && docker-php-ext-configure gd --with-jpeg=/usr/include/ --with-freetype=/usr/include/ \
   && docker-php-ext-configure zip \
 
+  # composer install
+  && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer \
+  && composer global require "hirak/prestissimo" \
+  && composer config -g repos.packagist composer https://packagist.kr \
+
   #  Clean
   && rm -rf /var/cache/apk/* \
-  && docker-php-source delete
+  && docker-php-source delete \
+  && rm -rf /root/.composer/cache
