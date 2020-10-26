@@ -43,6 +43,7 @@ RUN apk add --update --no-cache \
 
   # composer install
   && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer \
+  && composer self-update --2 \
 
   #  Clean
   && rm -rf /var/cache/apk/* \
